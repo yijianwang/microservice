@@ -1,4 +1,4 @@
-package com.sap.academy.sales.service.api.models;
+package com.sap.academy.sales.api.models;
 
 public class SalesOrderItem {
     String documentItemId;

@@ -1,4 +1,4 @@
-package com.sap.academy.sales.service.api.models;
+package com.sap.academy.sales.api.models;
 
 import java.time.LocalDate;
 import java.util.Set;
