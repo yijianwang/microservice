@@ -1,0 +1,11 @@
+COLUMN TABLE "SALES_ORDER_HEADER" (
+      "DOCUMENT_ID" NVARCHAR(50) 	COMMENT 'Sales Document ID',
+      "SALES_DOCUMENT_NUMBER" NVARCHAR(50) 	COMMENT 'Sales Document Number',
+      "DOCUMENT_CREATION_DATE" DATE 	  COMMENT 'Document Creation Date',
+      "QUOTATION_VALID_FROM" DATE 		 COMMENT 'Quotation valid from date',
+      "NET_VALUE" DOUBLE COMMENT 'Net value',
+      "CURRENCY" NVARCHAR(10)	COMMENT 'Currency',
+      "SALES_ORGANIZATION" NVARCHAR(50)	COMMENT 'Sales Organization',
+      PRIMARY KEY ("DOCUMENT_ID")
+   )
+   COMMENT 'Table with Sales Order Header data'

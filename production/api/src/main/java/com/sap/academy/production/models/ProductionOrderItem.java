@@ -1,19 +1,24 @@
-package com.sap.academy.sales.api.models;
+package com.sap.academy.production.models;
 
-import java.util.Set;
-
-public class SalesOrderItem {
+public class ProductionOrderItem {
     String documentItemId;
-    String headerDocumentId;
     String materialNumber;
     String description;
     Float quantity;
     String unitOfMeasure;
+    String salesOrderNumber;
 
-
-    public SalesOrderItem() {
+    public ProductionOrderItem() {
     }
 
+    public ProductionOrderItem(String documentItemId, String materialNumber, String description, Float quantity, String unitOfMeasure, String salesOrderNumber) {
+        this.documentItemId = documentItemId;
+        this.materialNumber = materialNumber;
+        this.description = description;
+        this.quantity = quantity;
+        this.unitOfMeasure = unitOfMeasure;
+        this.salesOrderNumber = salesOrderNumber;
+    }
 
     public String getDocumentItemId() {
         return documentItemId;
@@ -21,14 +26,6 @@ public class SalesOrderItem {
 
     public void setDocumentItemId(String documentItemId) {
         this.documentItemId = documentItemId;
-    }
-
-    public String getHeaderDocumentId() {
-        return headerDocumentId;
-    }
-
-    public void setHeaderDocumentId(String headerDocumentId) {
-        this.headerDocumentId = headerDocumentId;
     }
 
     public String getMaterialNumber() {
@@ -61,5 +58,13 @@ public class SalesOrderItem {
 
     public void setUnitOfMeasure(String unitOfMeasure) {
         this.unitOfMeasure = unitOfMeasure;
+    }
+
+    public String getSalesOrderNumber() {
+        return salesOrderNumber;
+    }
+
+    public void setSalesOrderNumber(String salesOrderNumber) {
+        this.salesOrderNumber = salesOrderNumber;
     }
 }

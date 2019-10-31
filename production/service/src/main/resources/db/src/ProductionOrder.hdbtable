@@ -1,0 +1,12 @@
+COLUMN TABLE "PRODUCTION_ORDER_HEADER" (
+     "DOCUMENT_ID" NVARCHAR(50)     COMMENT 'Production Document ID',
+     "ORDER_NUMBER" NVARCHAR(50)     COMMENT 'Production Document Number',
+     "START_DATE" DATE       COMMENT 'Production Start Date',
+     "FINISH_DATE" DATE       COMMENT 'Production Finish Date',
+     "SCHEDULED_START_DATE" DATE       COMMENT 'Production Scheduled Date',
+     "QUANTITY" DOUBLE COMMENT 'Total Quantity',
+     "UNIT_OF_MEASURE" NVARCHAR(10)    COMMENT 'Unit of measure',
+     "STATUS" NVARCHAR(10) COMMENT 'Document Status',
+     PRIMARY KEY ("DOCUMENT_ID")
+  )
+  COMMENT 'Table for Production Order Header data'

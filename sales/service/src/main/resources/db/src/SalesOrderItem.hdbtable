@@ -1,0 +1,10 @@
+COLUMN TABLE "SALES_ORDER_ITEM" (
+      "DOCUMENT_ITEM_ID" NVARCHAR(50) 	COMMENT 'Sales Document Item Id',
+      "HEADER_DOCUMENT_ID" NVARCHAR(10) 	  COMMENT 'Sales Header Document Id',
+      "MATERIAL_NUMBER" NVARCHAR(40) 		 COMMENT 'Material Number',
+      "DESCRIPTION" NVARCHAR(100) COMMENT 'Description',
+      "QUANTITY" Double	COMMENT 'Quantity',
+      "UNIT_OF_MEASURE" NVARCHAR(10)	COMMENT 'Unit of measure',
+      PRIMARY KEY ("DOCUMENT_ITEM_ID")
+   )
+   COMMENT 'Table with Sales Order Item data'

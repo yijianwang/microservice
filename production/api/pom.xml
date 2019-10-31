@@ -4,14 +4,14 @@
 	<modelVersion>4.0.0</modelVersion>
 	<parent>
 		<groupId>com.sap.academy</groupId>
-		<artifactId>sales</artifactId>
+		<artifactId>production</artifactId>
 		<version>0.0.1-SNAPSHOT</version>
 	</parent>
-	<groupId>com.sap.academy.sales</groupId>
+	<groupId>com.sap.academy.production</groupId>
 	<artifactId>api</artifactId>
 	<version>0.0.1-SNAPSHOT</version>
-	<name>sales-api</name>
-	<description>SAP Academy Projects</description>
+	<name>production-api</name>
+	<description>API module</description>
 	<packaging>jar</packaging>
 
 	<properties>
@@ -19,8 +19,6 @@
 	</properties>
 
 	<dependencies>
-
-
 		<dependency>
 			<groupId>org.springframework.boot</groupId>
 			<artifactId>spring-boot-devtools</artifactId>
@@ -32,8 +30,7 @@
 			<artifactId>spring-boot-starter-test</artifactId>
 			<scope>test</scope>
 		</dependency>
-
-	</dependencies>
+    </dependencies>
 
 	<build>
 		<plugins>

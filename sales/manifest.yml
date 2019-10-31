@@ -1,0 +1,17 @@
+---
+applications:
+  - name: sales
+    routes:
+      - route: sales.cfapps.eu10.hana.ondemand.com
+    memory: 1G
+    timeout: 300
+    path: service/target/sales-service-exec.jar
+    buildpack: sap_java_buildpack
+    env:
+      # Use the non-blocking /dev/urandom instead of the default to generate random numbers.
+      # This may help with slow startup times, especially when using Spring Boot.
+      JAVA_OPTS: -Djava.security.egd=file:///dev/./urandom
+      SPRING_PROFILES_ACTIVE: cloud, HaaS
+    services:
+      - com.sap.academy.sales
+      - smallrabbit

@@ -4,13 +4,14 @@
 	<modelVersion>4.0.0</modelVersion>
 	<parent>
 		<groupId>com.sap.academy</groupId>
-		<artifactId>sales</artifactId>
+		<artifactId>production</artifactId>
 		<version>0.0.1-SNAPSHOT</version>
 	</parent>
-	<groupId>com.sap.academy.sales</groupId>
+	<groupId>com.sap.academy.production</groupId>
 	<artifactId>service</artifactId>
-	<name>sales-service</name>
-	<description>SAP Academy Project</description>
+	<version>0.0.1-SNAPSHOT</version>
+	<name>production-service</name>
+	<description>Service module</description>
 	<packaging>jar</packaging>
 
 	<properties>
@@ -39,7 +40,7 @@
 		</dependency>
 
 		<dependency>
-			<groupId>com.sap.academy.sales</groupId>
+			<groupId>com.sap.academy.production</groupId>
 			<artifactId>api</artifactId>
 			<version>0.0.1-SNAPSHOT</version>
 		</dependency>
@@ -102,7 +103,7 @@
 	</dependencies>
 
 	<build>
-		<finalName>sales-service</finalName>
+		<finalName>production-service</finalName>
 		<plugins>
 			<plugin>
 				<groupId>org.springframework.boot</groupId>
