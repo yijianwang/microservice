@@ -1,11 +1,11 @@
 ---
 applications:
-  - name: sales7
+  - name: production7
     routes:
-      - route: sales7.cfapps.eu10.hana.ondemand.com
+      - route: production7.cfapps.eu10.hana.ondemand.com
     memory: 1G
     timeout: 300
-    path: service/target/sales-service-exec.jar
+    path: service/target/production-service-exec.jar
     buildpack: sap_java_buildpack
     env:
       # Use the non-blocking /dev/urandom instead of the default to generate random numbers.
@@ -13,5 +13,5 @@ applications:
       JAVA_OPTS: -Djava.security.egd=file:///dev/./urandom
       SPRING_PROFILES_ACTIVE: cloud, HaaS
     services:
-      - com.sap.academy.salesT7
+      - com.sap.academy.productionT7
       - smallrabbit
