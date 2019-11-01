@@ -1,8 +1,10 @@
 package com.sap.academy.production.models;
+
 import com.sap.academy.production.commons.EventHeader;
 
 import java.time.LocalDate;
 import java.util.Set;
+import java.util.HashSet;
 
 public class ProductionOrderHeader extends EventHeader {
     String documentId;
@@ -16,23 +18,7 @@ public class ProductionOrderHeader extends EventHeader {
     private Set<ProductionOrderItem> items;
 
     public ProductionOrderHeader() {
-    }
-
-    public ProductionOrderHeader(String documentId, String orderNumber, LocalDate startDate, LocalDate finishDate, LocalDate scheduledStartDate, Double quantity, String unitOfMeasure, String status, Set<ProductionOrderItem> items) {
-        this.documentId = documentId;
-        this.orderNumber = orderNumber;
-        this.startDate = startDate;
-        this.finishDate = finishDate;
-        this.scheduledStartDate = scheduledStartDate;
-        this.quantity = quantity;
-        this.unitOfMeasure = unitOfMeasure;
-        this.status = status;
-        this.items = items;
-    }
-
-
-    public void setItems(Set<ProductionOrderItem> items) {
-        this.items = items;
+        items = new HashSet<>();
     }
 
     public String getDocumentId() {
@@ -101,5 +87,9 @@ public class ProductionOrderHeader extends EventHeader {
 
     public Set<ProductionOrderItem> getItems() {
         return items;
+    }
+
+    public void setItems(Set<ProductionOrderItem> items) {
+        this.items = items;
     }
 }

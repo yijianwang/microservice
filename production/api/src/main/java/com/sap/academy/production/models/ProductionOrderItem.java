@@ -1,6 +1,7 @@
 package com.sap.academy.production.models;
 
 public class ProductionOrderItem {
+
     String documentItemId;
     String materialNumber;
     String description;
@@ -9,15 +10,6 @@ public class ProductionOrderItem {
     String salesOrderNumber;
 
     public ProductionOrderItem() {
-    }
-
-    public ProductionOrderItem(String documentItemId, String materialNumber, String description, Float quantity, String unitOfMeasure, String salesOrderNumber) {
-        this.documentItemId = documentItemId;
-        this.materialNumber = materialNumber;
-        this.description = description;
-        this.quantity = quantity;
-        this.unitOfMeasure = unitOfMeasure;
-        this.salesOrderNumber = salesOrderNumber;
     }
 
     public String getDocumentItemId() {

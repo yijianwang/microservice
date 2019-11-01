@@ -6,6 +6,8 @@ import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.context.annotation.Scope;
 import org.springframework.stereotype.Component;
+import com.sap.academy.production.controller.ProductionOrderService;
+import org.springframework.beans.factory.annotation.Autowired;
 
 import java.util.Map;
 
@@ -17,9 +19,18 @@ public class MessageDelegator implements MessageProcessor {
 
     private final Logger logger = LoggerFactory.getLogger(this.getClass());
 
+    @Autowired
+    ProductionOrderService productionOrderService;
+
     @Override
     public void processMessage() {
         logger.info("Incoming meessage==>{}",this.message);
+        try{
+            setTechnicalContext();
+            productionOrderService.processMessage(message);
+        }catch (Exception e){
+            logger.error("MessageDelegator",e);
+        }
     }
 
     @Override

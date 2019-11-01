@@ -22,15 +22,21 @@ public class DbDeployer {
     private String applicationId;
 
     public void prepareExistingTenants(){
+//        consumerStarter.init();
+//        List<String> tenants = dynamicDeployApiImpl.getAllTenants(applicationId);
+//        tenants.forEach(tenantId->{
+//            try {
+//                prepareTenant(tenantId);
+//            } catch (Exception e) {
+//                e.printStackTrace();
+//            }
+//        });
         consumerStarter.init();
-        List<String> tenants = dynamicDeployApiImpl.getAllTenants(applicationId);
-        tenants.forEach(tenantId->{
-            try {
-                prepareTenant(tenantId);
-            } catch (Exception e) {
-                e.printStackTrace();
-            }
-        });
+        try {
+            prepareTenant("ACA_T7");
+        } catch (Exception e) {
+            e.printStackTrace();
+        }
     }
 
     public void prepareTenant(String tenantId) throws Exception {

@@ -21,7 +21,7 @@ public class ProductionOrderController {
     @PostMapping("/createorder")
     public ResponseEntity<String> newProductionOrder(@RequestHeader(value="tenantId") String tenantId,@RequestHeader(value="userId") String userId, @RequestBody ProductionOrderHeader productionOrderHeader) {
         setTechnicalContext(tenantId,userId);
-        ProductionOrderHeader productionOrderHeader1 = productionOrderService.createProductionOrder(productionOrderHeader);
+        com.sap.academy.production.models.ProductionOrderHeader productionOrderHeader1 = productionOrderService.saveProductionOrder(productionOrderHeader);
         Gson gson = new Gson();
         return new ResponseEntity<String>(gson.toJson(productionOrderHeader1).toString(),HttpStatus.CREATED);
     }
